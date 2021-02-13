@@ -34,18 +34,26 @@ class ProductItem extends HTMLElement {
 
     let btn = document.createElement('button');
     btn.id = 'yup';
-    btn.innerHTML = "Add To Cart"
+    if(localStorage.getItem(pobject.id) == null){
+      btn.innerHTML = "Add To Cart";
+    } else {
+      btn.innerHTML = "Remove From Cart";
+    }
+    //Create a list of all the items that you have kept 
     btn.onclick = function(){
-      alert("Added  to Cart!");
       let val = parseFloat(document.getElementById("cart-count").innerText);
       if(btn.innerHTML == "Add To Cart"){
         btn.innerHTML = "Remove From Cart";
         val++;
         document.getElementById("cart-count").innerHTML = val;
+        localStorage.setItem(21,val);
+        localStorage.setItem(pobject.id,1);
       } else {
         btn.innerHTML = "Add To Cart";
         val--;
         document.getElementById("cart-count").innerHTML = val;
+        localStorage.setItem(21,val);
+        localStorage.removeItem(pobject.id);
       }
     };
 

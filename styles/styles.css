@@ -39,12 +39,13 @@ nav {
   padding: 10px;
 }
 
+/* Modified to fix errors about unknown files */
 #shop-icon {
-  content: url("/assets/shop-icon.png");
+  content: url("../assets/shop-icon.png");
 }
 
 #cart-icon {
-  content: url("/assets/cart-icon.png");
+  content: url("../assets/cart-icon.png");
 }
 
 /* Custom Element CSS starts here */
