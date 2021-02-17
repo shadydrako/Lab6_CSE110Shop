@@ -59,25 +59,6 @@ class ProductItem extends HTMLElement {
 
     wrapper.appendChild(btn);
 
-    /*
-    const addToCart = wrapper.appendChild(document.createElement('button'));
-    addToCart.setAttribute('id', "myButton"+ pobject.id);
-    addToCart.innerHTML = "Add To Cart!";
-    addToCart.setAttribute('onclick',"alert('Added to Cart')");
-
-    //Button Changes from Remove from Cart <--> Add To Cart
-    addToCart.addEventListener('click',function(){
-      let val = parseFloat(document.getElementById("cart-count"));
-      if(addToCart.innerText == "Remove from Cart"){
-        addToCart.innerText = "Add To Cart";
-        this.getElementById("cart-count").innerText(val--);
-      }else{
-        addToCart.innerText = "Remove from Cart";
-        this.getElementById("cart-count").innerText(val++);
-      }
-    });
-    */
-
     const style = document.createElement('style');
     style.textContent = `
     .price {
